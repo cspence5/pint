@@ -10,6 +10,15 @@
 
 <%= render 'layouts/header' %>
 <div class="container">
+	
+	<!-- equal sign is used when you want text on a page -->
+	<% flash.each do |name, msg| %>
+	
+		<%= content_tag(:div, msg, class: "alert alert-#{name}") %>
+	
+	<% end %>
+	
+	
 	<%= yield %>
 
 </div>
